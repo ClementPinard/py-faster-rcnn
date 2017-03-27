@@ -1,15 +1,15 @@
-Allows object recognition real time with a Parrot Jumping Sumo.
+Real time object recognition with a Parrot Jumping Sumo.
 
 ![Alt text](http://forthtemple.com/sumo/sumo400.jpg?raw=true "Sumo") ![Alt text](http://forthtemple.com/sumo/glasses400.jpg?raw=true "Glasses recognized")
 
-Refer to the video to see it in action:
+Refer to the video to see the project in action:
 
 [![Youtube video](http://forthtemple.com/sumo/youtube.jpg)](https://youtu.be/WDaA7Qkv0xo)
 
 
-Images are sent from the sumo via wifi to a PC with an NIVIDIA GPU which processes the image real time. The images are processed for object detection with faster rcnn and this project is a fork of py-faster-rcnn and have included an ardrone directory and model directory. The processed images are displayed and recorded on the PC. The sumo is also controlled from the PC.
+Images are sent from the sumo via wifi to a PC which has an NIVIDIA GPU which processes the image real time. The images are processed for object detection with faster rcnn and this project is a fork of py-faster-rcnn and have included an ardrone directory and model directory. The processed images are displayed and recorded on the PC. The sumo is also controlled from the PC.
 
-Note also that it uses an original caffemodel that is trained for classes glasses, mugs, shoes and apples from 600 images.
+This project uses an original caffemodel that is trained for classes glasses, mugs, shoes and apples. The training process was done with over 600 images.
 
 ### Prerequisites:
 To be able to process images real time it is necessary to have an NVIDIA GPU preferbly better than NVIDIA 960. You will also need to install CUDA. It is possible to run in CPU mode but will take a few seconds per frame to process compared to 100ms with a decent NVIDIA GPU.
