@@ -1,19 +1,12 @@
 #!/usr/bin/python
 """
-  Experiments with Jumping Sumo
-  usage:
-       ./demo.py <task> [<metalog> [<F>]]
+  RCNN with Jumping Sumo
+
 """
-#import sys
-#import os
+
 import sys
+mport os
 
-#sys.path = ["C:\\glenn\\html\\java\\deeplearning\\caffe-fast-rcnn-faster-rcnn\\python"] + sys.path # ["C:\glenn\html\java\deeplearning\caffe-faster-R-CNN\caffe\python"]  + sys.path
-sys.path = ["C:\\glenn\\html\\java\\deeplearning\\try2\\python"] + sys.path # ["C:\glenn\html\java\deeplearning\caffe-faster-R-CNN\caffe\python"]  + sys.path
-
-import os
-os.environ['PATH'] = "C:\\glenn\\html\\java\\deeplearning\\caffe-windows-master2\\3rdparty\\bin;" + "C:\\glenn\\html\\java\\deeplearning\\caffe-windows-master\\3rdparty\lib;" + os.environ['PATH']
-#sys.path=['/home/skinhat/py-faster-rcnn/caffe-fast-rcnn/python'] + sys.path
 
 import math
 import cv2
@@ -53,6 +46,7 @@ stats=False
 videorecording=False
 video=None
 
+# convert raw image into opencv image
 def cvImage(image):
     file_jpgdata = StringIO(g_lastImage)
 
@@ -69,14 +63,7 @@ def keepLastImage( frame, debug=False ):
     global g_lastImage
     g_lastImage = frame[2]
     open_cv_image=cvImage(g_lastImage)
-    '''
-    file_jpgdata = StringIO(g_lastImage)
 
-    im = Image.open(file_jpgdata)
-    open_cv_image = np.array(im) 
-    # Convert RGB to BGR 
-    open_cv_image = open_cv_image[:, :, ::-1].copy() 
-    '''
     global rcnn
     if rcnn:
         # Detect objects in image
@@ -226,11 +213,11 @@ if __name__ == "__main__":
     prototxt = os.path.join(cfg.MODELS_DIR, 
                             'VGG_CNN_M_1024','faster_rcnn_end2endmasg', 'my.pt')
 
-    caffemodel = os.path.join('output', 'faster_rcnn_end2end','rcnn_RCNNmasg_train',
-                              'vgg_cnn_m_1024_faster_rcnnmasgv_iter_20000.caffemodel')
+    caffemodel = os.path.join('data',
+                              'forthtemple_faster_rcnnmasgv_iter_20000.caffemodel')
     if not os.path.isfile(caffemodel):
         raise IOError(('{:s} not found.\nDid you run ./data/script/'
-                       'fetch_faster_rcnn_models.sh?').format(caffemodel))
+                       'fetch_forthtemple_models.sh from root of your project?').format(caffemodel))
 
     if cpu_mode:
         caffe.set_mode_cpu()
@@ -259,7 +246,7 @@ if __name__ == "__main__":
             #COLOR.append()
     metalog=None
     print('j=turn left, i=forward, l=turn right, k=back, spc jump')
-    print('r toggle rcnn on and off, s stats on and off, w save screen, v toggle video record')
+    print('r=toggle rcnn on and off, s=stats on and off, w=save screen, v=toggle video record')
     robot = JumpingSumo( metalog=metalog )   
     robot.update( cmd=setVolumeCmd(0) )
     #setVolumeCmd( volume )	
