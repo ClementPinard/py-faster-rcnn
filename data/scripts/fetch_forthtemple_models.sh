@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" && pwd )"
-cd $DIR
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" && pwd )"
+cd data #/ $DIR
 
 FILE=forthtemple_faster_rcnnmasgv_iter_20000.caffemodel
 URL=https://www.dropbox.com/s/4k7ppr720pdao3j/$FILE
