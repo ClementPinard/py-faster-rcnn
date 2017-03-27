@@ -14,7 +14,7 @@ Note also that it uses an original caffemodel that is trained for classes glasse
 ### Prerequisites:
 To be able to process images real time it is necessary to have an NVIDIA GPU preferbly better than NVIDIA 960. You will also need to install CUDA. It is possible to run in CPU mode but will take a few seconds per frame to process compared to 100ms with a decent NVIDIA GPU.
 
-###Installation:
+### Installation:
 1. Refer to instructions below to install py-faster-rcnn.
 2. Download the caffemodel
 
@@ -24,7 +24,7 @@ cd $FRCN_ROOT
 ```
 
 
-###Usage:
+### Usage:
 1. Connect to your sumo via wifi.
 
 2. Run the sumo controller at:
@@ -34,6 +34,9 @@ python ardrone/sumorcnn.py
 ```
 3. Make sure the video window has focus and use the following keys to control the sumo.
    j=left, i=forward, k=backward, l=right, spc=jump, v to record a video, w to save save screen shot, r to stop rcnn object classification
+
+-------
+The following is the original py-faster-rcnn text:
 
 ### Disclaimer
 
