@@ -1,3 +1,13 @@
+This project allows you to do object recognition real time with your Parrot Jumping Sumo. Refer to the video 
+
+https://youtu.be/WDaA7Qkv0xo
+
+Basically images are sent from the sumo via wifi to a PC with an NIVIDIA GPU which processes the image real time. The images are processed for object detection with faster rcnn and this project is a fork of py-faster-rcnn and have included an ardrone directory and model directory. 
+
+Prerequisites:
+To be able to process images real time it is necessary to have an NVIDIA GPU preferbly better than NVIDIA 960. You can install in CPU mode but will take a few seconds per frame to process. You will also need to install CUDA. Refer to instructions below to install py-faster-rcnn.
+
+
 ### Disclaimer
 
 The official Faster R-CNN code (written in MATLAB) is available [here](https://github.com/ShaoqingRen/faster_rcnn).
