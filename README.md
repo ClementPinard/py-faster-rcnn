@@ -12,7 +12,7 @@ Images are sent from the sumo via wifi to a PC with an NIVIDIA GPU which process
 Note also that it uses an original caffemodel that is trained for classes glasses, mugs, shoes and apples from 600 images.
 
 ### Prerequisites:
-To be able to process images real time it is necessary to have an NVIDIA GPU preferbly better than NVIDIA 960. You can install in CPU mode but will take a few seconds per frame to process. You will also need to install CUDA. 
+To be able to process images real time it is necessary to have an NVIDIA GPU preferbly better than NVIDIA 960. You will also need to install CUDA. It is possible to run in CPU mode but will take a few seconds per frame to process compared to 100ms with a decent NVIDIA GPU.
 
 ###Installation:
 1. Refer to instructions below to install py-faster-rcnn.
