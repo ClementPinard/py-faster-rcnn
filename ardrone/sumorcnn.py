@@ -21,8 +21,8 @@ from apyros.metalog import MetaLog, disableAsserts
 from apyros.manual import myKbhit, ManualControlException
 from cStringIO import StringIO
 from PIL import Image
-import caffe
 import _init_paths
+import caffe
 from fast_rcnn.config import cfg
 from fast_rcnn.test import im_detect
 from fast_rcnn.nms_wrapper import nms
