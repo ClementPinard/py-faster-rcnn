@@ -3,7 +3,9 @@ This project allows you to do object recognition real time with your Parrot Jump
 ![Alt text](http://forthtemple.com/sumo/sumo400.jpg?raw=true "Sumo") ![Alt text](http://forthtemple.com/sumo/glasses400.jpg?raw=true "Glasses recognized")
 
 Refer to the video
-https://youtu.be/WDaA7Qkv0xo
+
+[![Youtube video](http://forthtemple.com/sumo/youtube.jpg)](https://youtu.be/WDaA7Qkv0xo)
+
 to see it in action.
 
 Images are sent from the sumo via wifi to a PC with an NIVIDIA GPU which processes the image real time. The images are processed for object detection with faster rcnn and this project is a fork of py-faster-rcnn and have included an ardrone directory and model directory. The processed images are displayed and recorded on the PC. The sumo is also controlled from the PC.
